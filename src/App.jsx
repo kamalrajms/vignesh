@@ -1,15 +1,14 @@
 import React from "react";
-import Header from "./component/Header";
-import Footer from "./component/footer";
-import Main from "./component/Main";
+import Greeting from "./component/greeting";
 
 export default function App() {
   return (
     <>
       <div className="main-body">
-        <Header />
-        <Main />
-        <Footer />
+        <Greeting name="vignesh" age={23} />
+        <Greeting name="Kamal" age={29} />
+        <Greeting name="qwer" age={29} />
+        <Greeting />
       </div>
     </>
   );
