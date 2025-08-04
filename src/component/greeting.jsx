@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function greeting({ name = "Guest", age = "unknown" }) {
+// const[stateVariable,setStartFunction]=useState(initial value)
+
+export default function greeting() {
+  const [count, setcount] = useState(0);
+  const onchange = (e) => {
+    setcount(count + 1);
+  };
+  console.log(count);
   return (
     <div>
-      <h3>
-        Hello,{name}and age is{age}
-      </h3>
+      <p>Count:{count}</p>
+      <button onClick={onchange}>increment</button>
     </div>
   );
 }
