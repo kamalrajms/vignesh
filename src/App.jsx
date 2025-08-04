@@ -1,12 +1,16 @@
 import React from "react";
-import Greeting from "./component/greeting";
-const name = "john";
+import Header from "./component/Header";
+import Footer from "./component/footer";
+import Main from "./component/Main";
 
 export default function App() {
   return (
-    <div>
-      <h2> Hello john,{name}</h2>
-      <Greeting />
-    </div>
+    <>
+      <div className="main-body">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    </>
   );
 }

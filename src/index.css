@@ -1,7 +1,29 @@
-.greeting {
-  border: 2px solid red;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
 }
 
-.lorem {
-  color: red;
+.main-body {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+.head {
+  background: red;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+}
+.footer {
+  background: violet;
+  width: 100%;
+  height: 10vh;
+}
+.main-content {
+  background: yellow;
+  width: 100%;
+  height: 80vw;
 }
