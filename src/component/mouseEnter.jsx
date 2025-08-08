@@ -7,7 +7,7 @@ export default function mouseEnter() {
   return (
     <div
       style={{ width: "200px", height: "400px", background: "red" }}
-      onMouseEnter={handleEnter} onm
+      onMouseEnter={handleEnter}
     >
       Hover over me
     </div>
