@@ -8,6 +8,11 @@ import Counter from "./component/Counter";
 import ConditionalRendering from "./component/ConditionalRendering";
 import ListRendering from "./component/ListRendering";
 import ToggleLightMode from "./component/ToggleLightMode";
+import HandlingInput from "./component/HandlingInput";
+import MultiInput from "./component/MultiInput";
+import UseEffectEg from "./component/UseEffectEg";
+import ValueChangeUseingUseEffect from "./component/ValueChangeUseingUseEffect";
+import ClearupFunction from "./component/ClearupFunction";
 
 export default function App() {
   let done = false;
@@ -16,18 +21,22 @@ export default function App() {
       <div className="main-body">
         {done && (
           <div>
-            <Greeting />
             <Onchange />
             <Onsubmit />
             <MouseEnter />
             <OmMouseLeaves />
             <Counter />
+            <Greeting />
+            <ConditionalRendering />
+            <ListRendering />
+            <ToggleLightMode />
           </div>
         )}
-
-        <ConditionalRendering />
-        <ListRendering />
-        <ToggleLightMode />
+        <HandlingInput />
+        <MultiInput />
+        <UseEffectEg />
+        <ValueChangeUseingUseEffect />
+        <ClearupFunction />
       </div>
     </>
   );

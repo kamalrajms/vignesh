@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./Greeting.module.css";
 
 // const[stateVariable,setStartFunction]=useState(initial value)
 
@@ -14,7 +15,7 @@ export default function greeting() {
   console.log(count);
   return (
     <div>
-      <p>Count:{count}</p>
+      <p className={styles.lorem}>Count:{count}</p>
       <button onClick={onchange}>increment</button>
       <br></br>
       <button onClick={handleclick}>Onclick</button>

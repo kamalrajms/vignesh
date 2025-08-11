@@ -1,0 +1,5 @@
+useEffect-
+
+useEffect(()=>{
+    // set of codes
+},[Dependencies])
