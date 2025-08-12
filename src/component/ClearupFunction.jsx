@@ -8,10 +8,10 @@ export default function ClearupFunction() {
     const interval = setInterval(() => {
       setSec((pre) => pre + 1);
     }, 1000);
-    return () => {
-      console.log("clear up time...");
-      clearInterval(interval);
-    };
+    // return () => {
+    //   console.log("clear up time...");
+    //   clearInterval(interval);
+    // };
   }, []);
   return (
     <div>

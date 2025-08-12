@@ -13,6 +13,8 @@ import MultiInput from "./component/MultiInput";
 import UseEffectEg from "./component/UseEffectEg";
 import ValueChangeUseingUseEffect from "./component/ValueChangeUseingUseEffect";
 import ClearupFunction from "./component/ClearupFunction";
+import AIPuseEffect from "./component/AIPuseEffect";
+import StopWatch from "./component/StopWatch";
 
 export default function App() {
   let done = false;
@@ -30,13 +32,16 @@ export default function App() {
             <ConditionalRendering />
             <ListRendering />
             <ToggleLightMode />
+            <HandlingInput />
+            <MultiInput />
+            <UseEffectEg />
+            <ValueChangeUseingUseEffect />
+            <ClearupFunction />
+            <AIPuseEffect />
           </div>
         )}
-        <HandlingInput />
-        <MultiInput />
-        <UseEffectEg />
-        <ValueChangeUseingUseEffect />
-        <ClearupFunction />
+
+        <StopWatch />
       </div>
     </>
   );
