@@ -15,6 +15,7 @@ import ValueChangeUseingUseEffect from "./component/ValueChangeUseingUseEffect";
 import ClearupFunction from "./component/ClearupFunction";
 import AIPuseEffect from "./component/AIPuseEffect";
 import StopWatch from "./component/StopWatch";
+import SetTimeInterval from "./component/setTimeInterval";
 
 export default function App() {
   let done = false;
@@ -42,6 +43,7 @@ export default function App() {
         )}
 
         <StopWatch />
+        <SetTimeInterval />
       </div>
     </>
   );

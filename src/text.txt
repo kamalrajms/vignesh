@@ -5,6 +5,8 @@ useContext
 useReducer
 useCallback
 useRef
+useNavigate
+useParams
 
 type of states
 
