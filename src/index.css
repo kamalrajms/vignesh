@@ -4,10 +4,33 @@
   box-sizing: border-box;
   border: 0;
 }
-button {
-  cursor: pointer;
+body {
+  width: 100vw;
+  height: 100vh;
 }
-.lorem {
-  color: red;
-  background-color: brown;
+
+.header {
+  width: 100%;
+  height: 10vh;
+  padding: 20px;
+  border: 10px solid red;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.body {
+  width: 100%;
+  height: 90vh;
+  background-color: yellowgreen;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.body::-webkit-scrollbar {
+  display: none;
+}
+.footer {
+  width: 100%;
+  height: 10vh;
+  background-color: palevioletred;
 }
