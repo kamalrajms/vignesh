@@ -37,3 +37,18 @@ npm install react-router-dom
 
 
 
+## useRef()
+
+    it returns a mutable (able to change) values
+
+    {current:value}
+
+    Does not cause Re-renderinr when update
+
+    useage:
+        access DOM elements directly.
+        Store multiple value that persist between renders without Re-rendering
+        Update anytype of data.
+
+    const variableName=useRef(initalValue)
+    
