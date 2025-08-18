@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useReducer } from "react";
 
 export default function App() {
-  // const [count, setCount] = useState(0);
+
   const initial = { count: 0 };
   const [state, dispatch] = useReducer(reducer, initial);
 
@@ -19,12 +19,7 @@ export default function App() {
   }
   return (
     <>
-      {/* <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>inc</button>
-      <br></br>
-      <button onClick={() => setCount(count - 1)}>Dev</button>
-      <br />
-      <button onClick={() => setCount(0)}>reset</button> */}
+     
       <h1>Count : {state.count}</h1>
       <button onClick={() => dispatch({ type: "increment" })}>increment</button>
       <br />

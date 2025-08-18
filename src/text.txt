@@ -53,7 +53,7 @@ npm install react-router-dom
     const variableName=useRef(initalValue)
     
 
-## useReducer()
+## useReducer(){}
 
     const [state,dispatch]=useReducer(reducerFunction,initialState)
 
