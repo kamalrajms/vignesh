@@ -61,3 +61,10 @@ npm install react-router-dom
     dispatch(action)=a function to tell the reducer what to do
     reducer(state,action)= the logical that return a new state
     initial value =stsarting value
+
+
+## useCallback()
+
+    const variableName=useCallback(()=>{
+        //code
+    },[dependencies])

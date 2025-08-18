@@ -1,31 +1,23 @@
-import React, { useRef, useState, useEffect, useReducer } from "react";
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  useReducer,
+  useCallback,
+} from "react";
+import Child from "./Child";
 
 export default function App() {
+  const [count, setcount] = useState(0);
+  const sayHello = useCallback(() => {
+    console.log("hello");
+  }, []);
 
-  const initial = { count: 0 };
-  const [state, dispatch] = useReducer(reducer, initial);
-
-  function reducer(state, action) {
-    switch (action.type) {
-      case "increment":
-        return { count: state.count + 1 };
-      case "decriment":
-        return { count: state.count - 1 };
-      case "reset":
-        return { count: 0 };
-      default:
-        return state;
-    }
-  }
   return (
     <>
-     
-      <h1>Count : {state.count}</h1>
-      <button onClick={() => dispatch({ type: "increment" })}>increment</button>
-      <br />
-      <button onClick={() => dispatch({ type: "decriment" })}>Decrement</button>
-      <br />
-      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+      <p>Count:{count}</p>
+      <button onClick={() => setcount(count + 1)}>increment</button>
+      <Child onClick={sayHello} />
     </>
   );
 }
