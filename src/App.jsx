@@ -1,27 +1,24 @@
-import React, { useState, useCallback } from "react";
-import Child from "./Child";
+import React from "react";
+import "./index.css";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import Home from "./componts/Home";
+import About from "./componts/About";
+import BolgDetailes from "./componts/BolgDetailes";
 
 export default function App() {
-  const [number, setNumber] = useState(1);
-  const [dark, setDark] = useState(false);
-
-  const getItem = useCallback(() => {
-    return [number, number + 1, number + 2];
-  }, [number]);
-
-  const theme = {
-    backgroundColor: dark ? "#333" : "#fff",
-    color: dark ? "#fff" : "#333",
-  };
   return (
-    <div style={theme}>
-      <input
-        type="number"
-        value={number}
-        onChange={(e) => setNumber(parseInt(e.target.value))}
-      />
-      <button onClick={() => setDark(!dark)}>Toggle theme</button>
-      <Child getItem={getItem} />
+    <div>
+      <BrowserRouter>
+        <nav className="header">
+          <Link to="/">Home</Link>
+          <Link to="/About">About</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/About/:id" element={<BolgDetailes />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -68,3 +68,5 @@ npm install react-router-dom
     const variableName=useCallback(()=>{
         //code
     },[dependencies])
+
+## useparams
