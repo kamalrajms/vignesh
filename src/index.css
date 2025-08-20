@@ -7,44 +7,29 @@
 body {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header {
+body > div {
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: skyblue;
+  width: 40%;
+}
+h2 {
+  text-align: center;
+}
+
+nav {
   width: 100%;
-  height: 10vh;
-  padding: 20px;
-  border: 10px solid red;
-  background-color: aqua;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  gap: 10px;
 }
-.body {
-  width: 100%;
-  height: 90vh;
-  background-color: yellowgreen;
-  overflow-x: hidden;
-  overflow-y: scroll;
+nav > input {
+  width: 79%;
 }
-.body::-webkit-scrollbar {
-  display: none;
-}
-.footer {
-  width: 100%;
-  height: 10vh;
-  background-color: palevioletred;
-}
-.container {
-  width: 500px;
-  height: 500px;
-  border: 5px solid black;
-  background-color: yellow;
-}
-.img-box,
-.container > img {
-  width: 100%;
-  height: 100%;
-}
-.img-box {
-  background-color: green;
+nav > button {
+  width: 29%;
 }

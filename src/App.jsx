@@ -1,22 +1,43 @@
-import React from "react";
-import "./index.css";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-import Home from "./componts/Home";
-import About from "./componts/About";
-import BolgDetailes from "./componts/BolgDetailes";
-import Header from "./componts/Header";
+//todo list
+
+import React, { useState } from "react";
 
 export default function App() {
+  const [todo, settodo] = useState([]);
+  const [task, setTask] = useState("");
+
+  const addTodo = () => {
+    if (task.trim() === "") return;
+    settodo([{ text: task }, ...todo]);
+    setTask("");
+  };
+
+  const deleteTodo = (ind) => {
+    const newtodo = todo.filter((_, i) => i !== ind);
+    settodo(newtodo);
+  };
+
   return (
     <div>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/About/:id" element={<BolgDetailes />} />
-        </Routes>
-      </BrowserRouter>
+      <h2>TO-DO List</h2>
+      <nav>
+        <input
+          type="text"
+          placeholder="Enter text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+        />
+        <button onClick={addTodo}>ADD</button>
+      </nav>
+
+      <ul>
+        {todo.map((todo, ind) => (
+          <li key={ind}>
+            {todo.text}
+            <button onClick={() => deleteTodo(ind)}>Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
